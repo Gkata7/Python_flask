@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Dojo Survery Assignment</title>
+    <meta charset="utf-8">
+    <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='dojo.css')}}">
+  </head>
+    <body>
+      <form id ="card" action="/result" method="post">
+        <label>
+          Your Name: <input id='text1' type='text' name='name'>
+        </label>
+        <label>
+          Dojo Location:
+          <select name='location'>
+            <option value ="San Jose">San Jose</option>
+            <option value ="Los Angeles">Los Angeles</option>
+            <option value ="Seattle">Seattle</option>
+            <option value ="Japan">Japan</option>
+            <option value ="China">China</option>
+            <option value ="Mississippi">Mississippi</option>
+          </select>
+        </label>
+        <label>
+          Favorite language:
+          <select name="language">
+            <option value ="Python">Python</option>
+            <option value ="HTML">HTML</option>
+            <option value ="Mean">Mean</option>
+            <option value ="Ruby">Ruby</option>
+            <option value ="IOS">IOS</option>
+          </select>
+        </label>
+          <h3>Comment (optional):</h3>
+          <textarea name='comment'></textarea>
+          <input id='text2' type='submit' value='Submit'>
+    </form>
+    </body>
+</html>

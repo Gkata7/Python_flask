@@ -1,0 +1,22 @@
+body{
+  text-align: center;
+}
+input{
+  margin-top: 20px;
+  width:80px;
+  height: 35px;
+}
+div.box{
+  height: 150px;
+  width: 150px;
+  display: inline-block;;
+  border: 1px solid black;
+  color: white;
+  vertical-align: top;
+}
+.wrong{
+  background-color: red;
+}
+.correct{
+  background-color: green;
+}

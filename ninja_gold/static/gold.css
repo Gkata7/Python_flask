@@ -1,0 +1,26 @@
+
+h1,.gold p{
+display: inline-block;
+vertical-align: middle;
+}
+.gold p{
+  height: 25px;
+  width: 100px;
+  border: 2px solid black;
+}
+.gold form{
+  border: 1px solid black;
+}
+.farm, .cave, .house, .casino{
+  display: inline-block;
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+}
+#activities {
+  width:800px;
+  height: 170px;
+  border: 1px solid black;
+  margin-top: 20px;
+  overflow-y: auto;
+}

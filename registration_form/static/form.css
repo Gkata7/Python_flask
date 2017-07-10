@@ -1,0 +1,26 @@
+#card{
+  width:290px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0px auto;
+  position: relative;
+}
+label{
+  display: block;
+  vertical-align: center;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#text2{
+  margin-left: 60px;
+  margin-top: 15px;
+}
+input{
+  position: absolute;
+  left: 45%;
+}
+p{
+  color: red;
+  font-size: 10pt;
+  margin-left: 120px;
+}
