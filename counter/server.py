@@ -1,22 +1,24 @@
-from flask import Flask, render_template, request, redirect,session
+from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
-app.secret_key="counterkey"
+app.secret_key = 'secretkey'
+
 
 @app.route('/')
-def index():
-    if 'count' in session:
-        session['count'] += 2
+def counter():
+    if 'counter' in session:
+        session['counter'] += 1
     else:
-        session['count'] += 1
-    return render_template("index.html", count=session['count'])
+        session['counter'] = 1
+    return render_template('index.html')
 
-@app.route('/reset', methods=['post'])
-def reset():
-    session['count'] = 0
-    return redirect("/")
+@app.route('/add', methods=['POST'])
+def add_two():
+    session['counter'] += 1
+    return redirect('/')
 
-@app.route('/counter', methods=['post'])
-def create_user():
-   return redirect('/')
+@app.route('/clear', methods = ['POST'])
+def clear():
+    session['counter'] = 0
+    return redirect ('/')
 
 app.run(debug=True)
