@@ -38,7 +38,7 @@
           {% endfor %}
         {% endif %}
       {% endwith %}
-      <label>Password: <input id='text1' type='text' name='password'></label>
+      <label>Password: <input id='text1' type='password' name='password'></label>
       {% with errors = get_flashed_messages (category_filter=['confirmError']) %}
         {% if errors %}
           {% for message in errors %}
@@ -46,7 +46,7 @@
           {% endfor %}
         {% endif %}
       {% endwith %}
-      <label>Confirm Password: <input id='text1' type='text' name='confirm_password'></label>
+      <label>Confirm Password: <input id='text1' type='password' name='confirm_password'></label>
         <input id='text2' type='submit' value='Submit'>
   </form>
   </body>
