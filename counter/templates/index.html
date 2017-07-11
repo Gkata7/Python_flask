@@ -7,13 +7,16 @@
 <body>
   <div id="container">
     <h1>Counter</h1>
-    <p>{{ count }}</p>
-    <form id ="card" action="/counter" method="post">
-      <input id='ninjas' type='submit' value='Add'>
+    <p>{{ session['counter'] }} times.</p>
+   
+    <form action="/add" method="post">
+      <button>Add</button>
     </form>
-      <form id ="card" action="/reset" method="post">
-        <input id='hacker' type='submit' value='Reset'>
-      </form>
+   
+    <form action="/clear" method="post">
+      <button>Clear</button>
+    </form>
   </div>
+
 </body>
 </html>
