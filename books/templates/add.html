@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add User</title>
+  </head>
+  <body>
+    <h2>Add A User</h2>
+    <form action="/adduser" method="post" style = "display: inline-block; text-align: center; margin: auto;">
+    {% with errors = get_flashed_messages(category_filter = ['titleError']) %}
+      {% if errors %}
+        {% for message in errors %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+      <input type="text" name="title" placeholder="Title">
+    {% with errors = get_flashed_messages(category_filter = ['authorError']) %}
+      {% if errors %}
+        {% for message in errors %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+      <input type="text" name="author" placeholder="Author">
+      <input type="submit" name="Add Book" value = "Add Book">
+    </form>
+  </body>
+</html>
